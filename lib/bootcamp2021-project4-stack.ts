@@ -1,4 +1,5 @@
 import * as cdk from '@aws-cdk/core';
+import * as apigw from '@aws-cdk/aws-apigateway';
 
 export class Bootcamp2021Project4Stack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
