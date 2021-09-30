@@ -12,7 +12,7 @@ import {AttributeType, Table} from "@aws-cdk/aws-dynamodb";
 
 
 
-export class Bootcamp2021Project4Stack extends cdk.Stack {
+export class ProjectRestfullApiStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
@@ -103,13 +103,13 @@ export class Bootcamp2021Project4Stack extends cdk.Stack {
     const items = api.root.addResource("books");
     items.addMethod("GET",getAllIntegration);
     items.addMethod("POST", createOneIntegration);
-    addCrosOptions(items);
+    addCorsOptions(items);
 
     const singleItem = items.addResource("{id}");
     singleItem.addMethod("GET", getAllIntegration);
     singleItem.addMethod("PATCH",updateOneIntegration);
     singleItem.addMethod('DELETE',deleteOneIntegration);
-    addCrosOptions(singleItem);
+    addCorsOptions(singleItem);
      
 }
   
