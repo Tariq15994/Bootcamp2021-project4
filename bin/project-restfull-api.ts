@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { Bootcamp2021Project4Stack } from '../lib/bootcamp2021-project4-stack';
+import { ProjectRestfullApiStack } from '../lib/project4-restfull-apistack';
 
 const app = new cdk.App();
-new Bootcamp2021Project4Stack(app, 'Bootcamp2021Project4Stack', {
+new ProjectRestfullApiStack(app, 'Bootcamp2021Project4Stack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

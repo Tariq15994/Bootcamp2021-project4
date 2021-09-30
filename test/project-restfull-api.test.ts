@@ -1,11 +1,11 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as Bootcamp2021Project4 from '../lib/bootcamp2021-project4-stack';
+import * as ProjectRestfullApi from '../lib/project4-restfull-apistack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new Bootcamp2021Project4.Bootcamp2021Project4Stack(app, 'MyTestStack');
+    const stack = new ProjectRestfullApi.ProjectRestfullApiStack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
